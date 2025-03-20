@@ -6,6 +6,7 @@ export default axios.create({
     accept: 'application/json',
   },
   params: {
-    api_key: '6168ee115ea64b36c77cf9808a0a2b36',
+    // eslint-disable-next-line no-undef
+    api_key: process.env.REACT_APP_API_KEY,
   },
 })
