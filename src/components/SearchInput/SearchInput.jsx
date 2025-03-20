@@ -7,7 +7,7 @@ const SearchInput = ({ onSearch, ...props }) => {
 
   const debounceSearch = useCallback(
     _.debounce((value) => {
-      onSearch(value)
+      onSearch(value.trim() === '' ? 'return' : value)
     }, 1000),
     [onSearch],
   )
